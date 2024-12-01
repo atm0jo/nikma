@@ -1,23 +1,25 @@
+# Pastikan Anda menginstal pustaka praytimes terlebih dahulu dengan perintah:
+# pip install praytimes
 
-#!/usr/bin/env python
-import os
-import sys
+from praytimes import PrayTimes
 
-if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mywebsite.settings")
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError:
-        # The above import may fail for some other reason. Ensure that the
-        # issue is really that Django is missing to avoid masking other
-        # exceptions on Python 2.
-        try:
-            import django
-        except ImportError:
-            raise ImportError(
-                "Couldn't import Django. Are you sure it's installed and "
-                "available on your PYTHONPATH environment variable? Did you "
-                "forget to activate a virtual environment?"
-            )
-        raise
-    execute_from_command_line(sys.argv)
+# Inisialisasi metode perhitungan waktu sholat (Umumnya metode MWL)
+pray_times = PrayTimes('MWL')
+
+# Input lokasi
+latitude = float(input("Masukkan latitude (lintang lokasi Anda): "))
+longitude = float(input("Masukkan longitude (bujur lokasi Anda): "))
+timezone = float(input("Masukkan timezone lokasi Anda (contoh: +7 untuk WIB): "))
+
+# Dapatkan waktu sholat untuk hari ini
+from datetime import date
+today = date.today()
+waktu_sholat = pray_times.getTimes((today.year, today.month, today.day), (latitude, longitude), timezone)
+
+# Tampilkan hasil
+print("\n--- Waktu Sholat ---")
+print("Subuh   :", waktu_sholat['fajr'])
+print("Dzuhur  :", waktu_sholat['dhuhr'])
+print("Ashar   :", waktu_sholat['asr'])
+print("Maghrib :", waktu_sholat['maghrib'])
+print("Isya    :", waktu_sholat['isha'])
