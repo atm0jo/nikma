@@ -30,3 +30,11 @@ print(f"Berat badan: {berat} kg")
 print(f"Tinggi badan: {tinggi} m")
 print(f"BMI Anda: {round(bmi, 2)}")
 print(f"Kategori: {kategori}")
+
+
+
+
+
+
+
+
