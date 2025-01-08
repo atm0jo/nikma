@@ -23,3 +23,12 @@ print("Dzuhur  :", waktu_sholat['dhuhr'])
 print("Ashar   :", waktu_sholat['asr'])
 print("Maghrib :", waktu_sholat['maghrib'])
 print("Isya    :", waktu_sholat['isha'])
+
+
+
+
+
+
+
+
+
