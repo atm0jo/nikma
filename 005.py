@@ -35,6 +35,3 @@ print(f"Kategori: {kategori}")
 
 
 
-
-
-
