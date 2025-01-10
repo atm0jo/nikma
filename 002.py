@@ -30,8 +30,3 @@ print("Rata-rata nilai siswa:", round(rata_rata, 2))
 print("Nilai maksimum:", nilai_maks)
 print("Nilai minimum:", nilai_min)
 print("Jumlah siswa dengan nilai di atas rata-rata:", jumlah_di_atas_rata_rata)
-
-
-
-
-
