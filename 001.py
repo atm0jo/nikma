@@ -25,10 +25,3 @@ print("Maghrib :", waktu_sholat['maghrib'])
 print("Isya    :", waktu_sholat['isha'])
 
 
-
-
-
-
-
-
-
